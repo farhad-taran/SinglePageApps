@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using System.Web.Optimization;
+using Todos.App_Start;
 
 namespace Todos
 {
@@ -8,17 +9,8 @@ namespace Todos
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
-                        "~/Scripts/angular/angular.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/angularApp")
-            .IncludeDirectory("~/AngularApp", "*.js", true));
-
-            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.validate*"));
+            JqueryBundleConfig.RegisterBundles(bundles);
+            AngularBundleConfig.RegisterBundles(bundles);
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
