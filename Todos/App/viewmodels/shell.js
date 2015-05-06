@@ -8,6 +8,7 @@
         },
         activate: function () {
             router.map([
+                { route: '', title: 'Welcome', moduleId: 'viewmodels/welcome', nav: true },
                 { route: 'tasks', moduleId: 'viewmodels/tasks', nav: true },
                 { route: 'completed', moduleId: 'viewmodels/completed', nav: true },
                 { route: 'logs', moduleId: 'viewmodels/logs', nav: true }
