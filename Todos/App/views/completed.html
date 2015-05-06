@@ -1,0 +1,7 @@
+﻿<h2>Completed Tasks</h2>
+<ul data-bind="foreach: tasks">
+    <li data-bind="visible:$data.done()">
+        <input type="checkbox" data-bind="checked:$data.done">
+        <span data-bind="text: $data.taskName"> </span>
+    </li>
+</ul>

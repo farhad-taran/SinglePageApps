@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿#region Using References
+
 using System.Web.Mvc;
+
+#endregion
 
 namespace Todos.Controllers
 {
@@ -10,7 +10,8 @@ namespace Todos.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index",
+                                    "Durandal");
         }
     }
 }
